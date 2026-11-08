@@ -1,0 +1,18 @@
+# Local data and generated artifacts
+/data/raw/*
+!/data/raw/.gitkeep
+/data/processed/*
+!/data/processed/.gitkeep
+/models/*
+!/models/.gitkeep
+/results/figures/*
+!/results/figures/.gitkeep
+/results/metrics/*
+!/results/metrics/.gitkeep
+
+# Python and notebook files
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
