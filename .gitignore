@@ -5,6 +5,7 @@
 !/data/processed/.gitkeep
 /models/*
 !/models/.gitkeep
+!/models/logistic_regression_baseline.joblib
 /results/figures/*
 !/results/figures/.gitkeep
 /results/metrics/*
