@@ -11,6 +11,7 @@ A notebook-first project using the synthetic PaySim dataset. The planned work co
 - `notebooks/03_logistic_regression_baseline.ipynb` - fixed split, baseline training and validation.
 - `notebooks/04_model_comparison.ipynb` - class-weighting ablation and decision-tree comparison on the same split.
 - `notebooks/05_random_forest_naive_bayes.ipynb` - Random Forest and Naive Bayes comparison on the same split.
+- `notebooks/06_knn_baseline.ipynb` - resource-limited KNN feasibility baseline using stratified training and validation samples; its metrics are not directly comparable to full-validation results.
 - `models/logistic_regression_baseline.joblib` - small baseline checkpoint with preprocessing, model and configuration.
 - `models/weighted_logistic_regression.joblib` and `models/decision_tree_baseline.joblib` - checkpoints from notebook 04.
 - `models/gaussian_naive_bayes.joblib` and `models/random_forest_baseline.joblib` - checkpoints from notebook 05.
