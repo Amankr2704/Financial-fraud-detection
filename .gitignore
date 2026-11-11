@@ -6,6 +6,10 @@
 /models/*
 !/models/.gitkeep
 !/models/logistic_regression_baseline.joblib
+!/models/weighted_logistic_regression.joblib
+!/models/decision_tree_baseline.joblib
+!/models/gaussian_naive_bayes.joblib
+!/models/random_forest_baseline.joblib
 /results/figures/*
 !/results/figures/.gitkeep
 /results/metrics/*
