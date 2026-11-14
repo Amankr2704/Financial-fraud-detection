@@ -10,6 +10,8 @@
 !/models/decision_tree_baseline.joblib
 !/models/gaussian_naive_bayes.joblib
 !/models/random_forest_baseline.joblib
+!/models/xgboost_baseline.joblib
+!/models/xgboost_baseline.ubj
 /results/figures/*
 !/results/figures/.gitkeep
 /results/metrics/*

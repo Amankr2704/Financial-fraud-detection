@@ -1,6 +1,6 @@
 # Financial Fraud Detection Using Machine Learning and Deep Learning
 
-A notebook-first project using the synthetic PaySim dataset. The planned work compares six machine learning models and an artificial neural network, emphasizing fraud detection under severe class imbalance. Logistic-regression, decision-tree, Gaussian Naive Bayes and Random Forest baselines have been compared on validation data; the remaining models and final evaluation are pending.
+A notebook-first project using the synthetic PaySim dataset. The planned work compares six machine learning models and an artificial neural network, emphasizing fraud detection under severe class imbalance. Logistic-regression, decision-tree, Gaussian Naive Bayes, Random Forest and XGBoost baselines have been compared on validation data; KNN, the neural network and final evaluation are pending.
 
 ## Project structure
 
@@ -11,9 +11,11 @@ A notebook-first project using the synthetic PaySim dataset. The planned work co
 - `notebooks/03_logistic_regression_baseline.ipynb` - fixed split, baseline training and validation.
 - `notebooks/04_model_comparison.ipynb` - class-weighting ablation and decision-tree comparison on the same split.
 - `notebooks/05_random_forest_naive_bayes.ipynb` - Random Forest and Naive Bayes comparison on the same split.
+- `notebooks/06_xgboost_comparison.ipynb` - XGBoost training and validation comparison.
 - `models/logistic_regression_baseline.joblib` - small baseline checkpoint with preprocessing, model and configuration.
 - `models/weighted_logistic_regression.joblib` and `models/decision_tree_baseline.joblib` - checkpoints from notebook 04.
 - `models/gaussian_naive_bayes.joblib` and `models/random_forest_baseline.joblib` - checkpoints from notebook 05.
+- `models/xgboost_baseline.joblib` - XGBoost pipeline checkpoint; `models/xgboost_baseline.ubj` - native booster only, requiring the pipeline preprocessing.
 - `src/` - reusable project code, to be added during development.
 - `results/figures/` and `results/metrics/` - generated results.
 - `reports/` - report materials.
@@ -36,6 +38,8 @@ Running `03_logistic_regression_baseline.ipynb` reads the original CSV, verifies
 Running `04_model_comparison.ipynb` retrains the unweighted and class-weighted logistic models and a decision tree using the same split, compares validation results and writes the two additional checkpoints. The test partition remains unscored.
 
 Running `05_random_forest_naive_bayes.ipynb` verifies and loads the earlier trusted logistic and decision-tree checkpoints, trains Gaussian Naive Bayes and a resource-limited Random Forest, reports validation results, and saves two more checkpoints. The forest uses 20 trees and a 10% bootstrap sample per tree; the test partition remains unscored.
+
+Running `06_xgboost_comparison.ipynb` trains CPU XGBoost, compares validation results with the stored tree and forest baselines, and saves and verifies the XGBoost checkpoint and native booster. It does not score the test partition.
 
 ## Reproducibility status and limitations
 
